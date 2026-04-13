@@ -15,39 +15,29 @@ class DogApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                ), //加上背景顏色
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0), //加上內距
-                  child: Text('Rocky'),
-                ),
-              ),
-              SizedBox(height: 8.0),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                ), //加上背景顏色
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0), //加上內距
-                  child: Text('Lyla'),
-                ),
-              ),
-              SizedBox(height: 8.0),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                ), //加上背景顏色
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0), //加上內距
-                  child: Text('Nico'),
-                ),
-              ),
+             DogName('Rocky'),
+             SizedBox(height:8.0),
+             DogName('Lyla'),
+             SizedBox(height:8.0),
+             DogName('Nico'),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class DogName extends StatelessWidget {
+  final String name;
+  const DogName(this.name);
+
+  @override
+  Widget build(BuildContext context) {
+    return DecoratedBox(
+      decoration: BoxDecoration(color: Colors.lightBlueAccent),
+      child: Padding(padding: const EdgeInsets.all(8.0), 
+      child: Text(name)),
     );
   }
 }
