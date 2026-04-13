@@ -24,6 +24,7 @@ class DogApp extends StatelessWidget {
                   child: Text('Rocky'),
                 ),
               ),
+              SizedBox(height: 8.0),
               DecoratedBox(
                 decoration: BoxDecoration(
                   color: Colors.lightBlueAccent,
@@ -33,6 +34,7 @@ class DogApp extends StatelessWidget {
                   child: Text('Lyla'),
                 ),
               ),
+              SizedBox(height: 8.0),
               DecoratedBox(
                 decoration: BoxDecoration(
                   color: Colors.lightBlueAccent,
